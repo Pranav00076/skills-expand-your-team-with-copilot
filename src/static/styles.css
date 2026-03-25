@@ -27,9 +27,23 @@
   --warning: #ff9800;
   --warning-light: #fff3cd;
   --error: #c62828;
-  --error-light: #ffebee;
+  --error-light: #ffebee; /* info colors */
   --info: #0c5460;
   --info-light: #d1ecf1;
+}
+
+/* Dark theme variables */
+body.dark-theme {
+  --primary: #303f9f;
+  --primary-light: #666ad1;
+  --primary-dark: #001970;
+  --background: #121212;
+  --surface: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border: #333333;
+  --border-light: #2c2c2c;
+  --border-focus: #444444;
 }
 
 * {
@@ -617,6 +631,24 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#theme-toggle {
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+body.dark-theme #theme-toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #user-status {
